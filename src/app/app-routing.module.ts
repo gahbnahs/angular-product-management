@@ -4,7 +4,10 @@ import { PageNotFoundComponent } from './page-not-found.component';
 import { WelcomeComponent } from './home/welcome.component';
 
 const routes: Routes = [
- {path:"products", loadChildren:"./products/product.module#ProductModule" },
+ {
+   path:"products", 
+   loadChildren:"./products/product.module#ProductModule"
+ },
  {path:"home", component:WelcomeComponent},
  {path:"", redirectTo:"home", pathMatch:"full"},
  {path:"**", component:PageNotFoundComponent }
